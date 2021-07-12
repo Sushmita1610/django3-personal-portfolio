@@ -1,0 +1,26 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+    {% load static %}
+
+    <br>
+    <div class="container text-center">
+      <img src="{% static 'portfolio/portfolio-image.jpg' %}" height=1200 width=800>
+      <h1>Welcome to my Portfolio! My name is Sushmita Sen. I am an IT professional with over 2 years of experience. Here, you can find some of my websites that I have built using Django!</h1>
+    </div>
+
+    <div class="container text-left">
+      {% for project in projects %}
+      {% if project.url %}
+        <a href="{{ project.url }}"><img src="{{ project.image.url }}" height=150 width=480></a>
+      {% else %}
+        <img src="{{ project.image.url }}" height=150 width=480>
+      {% endif %}
+      <h2>{{ project.title }}</h2>
+      <p>{{ project.description|truncatechars:65 }}</p>
+
+      {% endfor %}
+    </div>
+
+{% endblock %}
+  </body>
+</html>

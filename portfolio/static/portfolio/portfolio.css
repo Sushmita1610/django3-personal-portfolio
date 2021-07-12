@@ -1,0 +1,18 @@
+body{
+  text-align: center;
+  font-family: sans-serif;
+  background-color: rgba(176,224,230,0.5);
+}
+
+p{
+  color: rgba(25,25,112.1);
+  height: 4em;
+}
+
+.navbar .nav-brand:hover{
+  color: rgba(0,0,0,.5) !important;
+}
+
+h1{
+  color: rgba(25,25,112.1);
+}
